@@ -17,21 +17,20 @@ router.post('/send-email', async (req, res) => {
     `;
 
     let transporter = nodemailer.createTransport({
-        host: 'mail.fazttech.net',
-        port: 587,
+        host:  'smtp.mail.yahoo.com',
+        port: 465,
         secure: false,
         auth: {
-            user: 'testtwo@fazttech.net',
-            pass: 'testtwocontraseña'
+            user: 'jobxt@yahoo.com.ar',
+            pass: 'bgqk anci hpya bagp'
         },
-        tls: {
-            rejectUnauthorized: false
-        }
+       
+        
     });
 
     let info = await transporter.sendMail({
-        from: '"FaztTech Server" <testtwo@fazttech.xyz>', // sender address,
-        to: 'fazttech@gmail.com',
+        from: '"FaztTech Server" <jobxt@yahoo.com.ar>', // sender address,
+        to: 'jobxt@yahoo.com.ar',
         subject: 'Website Contact Form',
         // text: 'Hello World'
         html: contentHTML
